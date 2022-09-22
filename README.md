@@ -1,6 +1,6 @@
 # Agenda de Compras
 
-## Proyecto de Desarrollo Web
+## Proyecto de Desarrollo Web (Fronted)
 
 Integrantes:
 
