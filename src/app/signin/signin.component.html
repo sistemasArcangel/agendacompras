@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Crea tu cuenta ahora</h1>
+        </div>
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
+    <div class="row" *ngIf="loading">
+        <div class="col-md-12">
+            <div class="spinner-border text-info float-right" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <form (ngSubmit) = "crear()" id="crear">
+        <div class="row">
+            <div class="col-md-12">
+                <input type="email" [(ngModel)]="usuario.correo" [ngModelOptions]="{standalone: true}" placeholder="Correo" class="form-control" required>                
+            </div>
+            
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="text" [(ngModel)]="usuario.nombre" [ngModelOptions]="{standalone: true}" placeholder="Nombre" class="form-control" required>                
+            </div>            
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="text" [(ngModel)]="usuario.apellido" [ngModelOptions]="{standalone: true}" placeholder="apellido" class="form-control" required>                
+            </div>            
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="password" [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}" placeholder="Password" class="form-control" required>                
+            </div>            
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <input class="btn btn-success float-right" type="submit" value="Crear">
+            </div>
+        </div>
+    </form>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <label class="float-right"> regresar <a href="#" (click)="regresar()">aqui</a>.</label>
+        </div>
+    </div>
+</div>
