@@ -1,84 +1,93 @@
-<div class="container">
+<section class="vh-100" style="background-color: hsl(0, 0%, 96%)">
+    <div class="container">
 
 
-    <div class="row">
-        <div class="col-md-12" >
-            <br>
-            <h1>Bienvenido</h1>
-        </div>
-        <div class="col-md-12">
-            <hr>
-        </div>
-    </div>
-
-
-    <div class="centered" *ngIf="loading">
-        <div class="col-md-12">
-            <div class="spinner-border text-info float-right" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <br>
-        <br>
-    </div>
-
-
-<section class="vh-80">
-  <div class="container-fluid h-custom">
-    <div class="card shadow-4-strong" style="border-radius: 4rem; background-color: hsl(0, 0%, 96%)"> 
-    <div class="row d-flex justify-content-center align-items-center h-90">
-      <div class="col-md-12 col-lg-10 col-xl-4 offset-xl-1">
-        
-        <form (ngSubmit) = "login()" id="login" >
-
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                    style="width: 185px;" alt="logo">
-
-            <div class="d-flex align-items-center mb-3 pb-1">
-                <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                <span class="h1 fw-bold mb-0">Agenda</span>
-              </div>
-
-            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Ingrese sus credenciales</h5>
-        
-        <br><br>
-          <!-- ingres de correo electronico -->
-          <div class="form-outline mb-4">
-              <input type="email" id="form3Example3"  class="form-control form-control-lg" 
-              [(ngModel)]="usuario.correo" [ngModelOptions]="{standalone: true}" 
-              placeholder="Ingrese su correo electronico"  required>                
-                
-          </div>
-
-          <!-- Password input -->
-          <div class="form-outline mb-3">
-              <input type="password" [(ngModel)]="usuario.password" 
-              [ngModelOptions]="{standalone: true}"
-               placeholder="Password" class="form-control form-control-lg" required>                
-                
-          </div>
-          
-          <div class="row" *ngIf="errorInicio">
+        <div class="row">
             <div class="col-md-12">
-                <label class="float-right" style="color: red; ">Usuario o password incorrecto.</label>
+                <br>
+                <h1>Bienvenido</h1>
             </div>
-         </div>
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
 
-          <div class="text-center text-lg-start mt-4 pt-2">
-            <button type="submit" value="Ingresar" class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-              
-            <p class="small fw-bold mt-2 pt-1 mb-0">Si no tienes cuenta con nosotros haz click aqui 
-                
-                <a href="#" class="link-danger" (click)="crearCuenta()"> regristrarse</a>.</p>
-                <br><br><br><br>
-          </div>
 
-        </form>
+        <div class="centered" *ngIf="loading">
+            <div class="col-md-12">
+                <div class="spinner-border text-info float-right" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+
+
+        <section class="vh-80">
+            <div class="container-fluid h-custom">
+                <div class="card shadow-4-strong" style="border-radius: 4rem; ">
+                    <div class="row d-flex justify-content-center align-items-center h-90">
+                        <div class="col-md-12 col-lg-10 col-xl-4 offset-xl-1">
+
+                            <form (ngSubmit)="login()" id="login">
+
+                                <h6 class="my-5 display-4 fw-bold ls-tight">
+                                     <br />
+                                    <span class="text-primary">Agenda</span>
+                                  </h6>
+                                  <!--
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                                    style="width: 185px;" alt="logo">
+                                    -->
+
+                                <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Ingrese sus credenciales
+                                </h5>
+
+                                <br><br>
+                                <!-- ingres de correo electronico -->
+                                <div class="form-outline mb-4">
+                                    <input type="email" id="form3Example3" class="form-control form-control-lg"
+                                        [(ngModel)]="usuario.correo" [ngModelOptions]="{standalone: true}"
+                                        placeholder="Ingrese su correo electronico" required>
+
+                                </div>
+
+                                <!-- Password input -->
+                                <div class="form-outline mb-3">
+                                    <input type="password" [(ngModel)]="usuario.password"
+                                        [ngModelOptions]="{standalone: true}" placeholder="Password"
+                                        class="form-control form-control-lg" required>
+
+                                </div>
+
+                                <div class="row" *ngIf="errorInicio">
+                                    <div class="col-md-12">
+                                        <label class="float-right" style="color: red; ">Usuario o password
+                                            incorrecto.</label>
+                                    </div>
+                                </div>
+
+                                <div class="text-center text-lg-start mt-4 pt-2">
+                                    <button type="submit" value="Ingresar" class="btn btn-success btn-lg"
+                                        style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+
+                                    <p class="small fw-bold mt-2 pt-1 mb-0">Si no tienes cuenta con nosotros haz click
+                                        aqui
+
+                                        <a href="#" class="link-danger" (click)="crearCuenta()"> regristrarse</a>.
+                                    </p>
+                                    <br><br><br><br>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
     </div>
-      </div>
-    </div>
-  </div>
-  
-
 </section>
