@@ -4,7 +4,7 @@
 
 Integrantes:
 
-Arcangel Santos,
-Sergio Quej,
-Miguel de Jesus Garcia,
-Keren Lopez
+-  Arcángel Gabriel Santos Pur \
+-  Sergio Faustino Quej Concuá \
+-  Miguel de Jesus Garcia Concua \
+-  Keren Baleska Lopez Oseida \
