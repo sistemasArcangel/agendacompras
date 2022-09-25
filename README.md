@@ -1,6 +1,6 @@
 ###Universidad Mariano Galvez
 
-# Agenda de Compras
+# Agenda
 
 ## Proyecto de Desarrollo Web (Frontend)
 
