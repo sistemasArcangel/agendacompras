@@ -6,7 +6,7 @@
     <!-- Collapsible wrapper -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+      <a class="navbar-brand mt-2 mt-lg-0">
         <h6 class=" display-5 fw-bold ls-tight">
           <span class="text-primary">Agenda</span>
         </h6>
@@ -14,13 +14,13 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" (click)="agregar()" >Nuevo contacto</a>
+          <a class="btn btn-light me-3" (click)="mostrarContactos2()" (click)="agregarF()" >Team</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Team</a>
+          <a class="btn btn-light me-3" (click)="agregar()" (click)="mostrarContactos()" >Nuevo contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Proyectos</a>
+          <a class="btn btn-light me-3" href="#">Proyectos</a>
         </li>
       </ul>
       <!-- Left links -->
@@ -79,7 +79,16 @@
 <!-- Navbar -->
 
 
-
+<div class="p-5 bg-image" style="
+        background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+        height: 120px;
+        ">
+  <div class="container">
+    <div class="title">
+      <h1>Hola {{usuario.nombre + " " +usuario.apellido}}</h1>
+    </div>
+  </div>
+</div>
 
 
 
@@ -87,11 +96,6 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <br>
-      <h1> Hola {{usuario.nombre + " " +usuario.apellido}}</h1>
-    </div>
-    
     <div class="col-md-12">
       <hr>
     </div>
@@ -106,12 +110,16 @@
     <br>
   </div>
   <br>
-  <div class="row">
-    <div class="col-md-12">
-      <h2>Mis contactos </h2>
-    </div>
-  </div>
+  
+
+
+  
   <form (ngSubmit)="crearContacto()" id="crear" *ngIf="crear">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Nuevo contacto </h2>
+      </div>
+    </div>
     <br>
     <div class="row">
       <div class="col-md-12">
@@ -188,10 +196,16 @@
       </div>
     </div>
   </form>
-  <br>
+
   <div class="row">
-    <div class="col-md-12">
-      <table class="table align-middle mb-0 bg-white">
+    <div class="col-md-12"   *ngIf="mostrarContacto" >
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Mis contactos </h2>
+        </div>
+      </div>
+      <br>
+      <table class="table align-middle mb-0 bg-white" >
         <thead class="bg-light">
           <tr>
             <th>Nombre</th>
@@ -234,3 +248,8 @@
     </div>
   </div>
 </div>
+<br><br><br>
+<div class="p-5 bg-image" style="
+background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+height: 300px;
+"></div>

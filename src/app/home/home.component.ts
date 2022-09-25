@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   contactos:any = [];
   contacto:any = {};
   crear:boolean = false;
+  mostrarContacto:boolean = true;
   loading:boolean = false;
   
   constructor(private http:HttpClient) { }
@@ -51,7 +52,18 @@ export class HomeComponent implements OnInit {
   }
 
   agregar(){
-    this.crear = !this.crear;
+    this.crear = true;
+  }
+  agregarF(){
+    this.crear = false;
+  }
+
+  mostrarContactos(){
+    this.mostrarContacto = false;
+  }
+
+  mostrarContactos2(){
+    this.mostrarContacto = true;
   }
 
   crearContacto(){
