@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
     );
   }
   buscarContactosServicio():Observable<any>{
-   return this.http.get<any>("http://localhost:8090/contacto/buscar/correo/"+this.usuario.correo).pipe(
+   return this.http.get<any>("http://localhost:8887/contacto/buscar/correo/"+this.usuario.correo).pipe(
      catchError(e=>"error")
    )
   }
@@ -83,7 +83,7 @@ export class HomeComponent implements OnInit {
         'Content-Type':'application/json'
       })
     }
-    return this.http.post<any>("http://localhost:8090/contacto/guardar", this.contacto,httpOptions);
+    return this.http.post<any>("http://localhost:8887/contacto/guardar", this.contacto,httpOptions);
   }
 
   finalizarCrearContacto(contacto:any){
